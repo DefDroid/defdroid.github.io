@@ -10,6 +10,7 @@
 
     <title>DefDroid: A Defensive Mobile OS</title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -34,6 +35,8 @@
           <ul class="nav navbar-nav">
             <li><a href="downloads.html">Downloads</a></li>
             <li><a href="publication.html">Publications</a></li>
+            <li><a href="downloads.html">Source Code</a></li>
+            <li><a href="http://groups.google.com/group/defdroid">User Group</a></li>
             <li><a href="feedback.html">Feedback</a></li>
           </ul>
         </div>
@@ -41,10 +44,64 @@
       <a href="https://github.com/DefDroid" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
       <!-- Jumbotron -->
+      <!-- 
       <div class="jumbotron">
         <h1>Trial and Feedback Welcome!</h1>
         <p class="lead">We are always looking for new users to try out DefDroid and let us know any feedback.</p>
         <p><a class="btn btn-lg btn-success" href="#" role="button">Get started</a></p>
+      </div>
+      -->
+      <div class="row">
+        <div class="col-md-3 col-md-push-9">
+          <div class="news">
+            <h4>News</h4>
+            <ul class="list-unstyled">
+              <li>The paper describing DefDroid was accepted by <a href="www.sigmobile.org/mobisys/2016">MobiSys '16</a> <span class="date">(Feb 23rd, 2015)</span></li>
+              <li>DefDroid was deployed to PhoneLab <span class="date">(Sept 21st, 2015)</span></li>
+              <li>DefDroid was deployed to <a href="https://phone-lab.org">PhoneLab</a> <span class="date">(Sept 21st, 2015)</span></li>
+              <li>DefDroid was ported to Android 5.1 <span class="date">(Sept 21st, 2015)</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9 col-md-pull-3">
+          <div class="col-md-7 col-sm-7">
+            <h2>Overview</h2>
+            <p>
+            The strong growth of mobile computing has led to an explosion of mobile apps.
+            The problem is that many mobile apps are not well written and misbehave
+            when installed on end users' smartphone.
+            </p>
+            </p>
+            DefDroid aims to address a class of issues in mobile apps in which some
+            app acts aggressively to its hosting ecosystem (e.g., keep searching GPS,
+            wake up the device frequently, frequently download large data via cellular
+            network). We call these issues <b>Disruptive App Behavior</b> (DAB). 
+            Table 1 shows some common disruptive app behavior that we have examined
+            in a study. (If you encounter some of them or new kinds of app issues
+            in your smartphone, we'd be happy to <a href="feedback.html">hear from you</a>.)
+            </p>
+            <p>
+            Disruptive app behavior is annoying to users because it affects not
+            only the app itself (e.g., compared to normal app defects that cause
+            crash or unresponsive) but also hurts user experiences for the other 
+            apps on the same device due to battery drain, excessive usage of data 
+            plan, overusage of storage space, etc. 
+            </p>
+            <p>
+            DefDroid provides a system-level solution to address disruptive app
+            behavior by making the mobile OS more defensive so that even if some
+            apps have defects that can cause disruptive behavior, the OS will
+            actively intervene to adjust the app execution and minimize potential
+            negative impact to battery, data plan or storage.
+            </p>
+          </div>
+          <div class="col-md-5 col-sm-5 col-padded-top col-center">
+            <div style="padding-top: 70px; width: 100%; max-width: 340px; display: inline-block; text-align: center;">
+              <img src="images/disruptive.png" style="width: 100%;">
+              <div><b>Table 1:</b> Common disruptive behavior we summarized from examining 9,000+ user posts/reports.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div> <!-- /container -->
     <script src="js/jquery-1.12.3.min.js"></script>

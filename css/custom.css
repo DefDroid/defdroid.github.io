@@ -15,6 +15,15 @@ a.nodec:hover {
   padding-left:5px;
   font-style: bold;
 }
+.news {
+  padding: 15px;
+  background-color: #fef4e9;
+  border-radius: 4px;
+}
+.news li .date {
+  color: #888;
+  font-size: 12px;
+}
 .tagline {
   display: inline-block;
   font-style: italic;
