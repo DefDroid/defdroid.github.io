@@ -9,6 +9,7 @@ to address it. But the success largely depends on data from the field
 to validate our understanding, design and evaluation.
 
 You can help contribute to the DefDroid project by 
+
 1. using DefDroid and let us know how it performs in the field
 2. telling us about some of the frustracting user experiences of some rogue apps
 3. submitting patches (pull requests) to the DefDroid source code
