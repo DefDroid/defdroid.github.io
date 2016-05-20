@@ -14,7 +14,7 @@ layout: default
   Table 1 below shows some common disruptive app behavior that we have examined
   in a study of more than 9,000 mobile user posts and reports. (If you encounter 
   some of them or new kinds of app issues in your smartphone, we'd be happy to 
-  [hear from you]("/feedback.html").
+  [hear from you](/feedback.html).
 
   Disruptive app behavior is annoying to users because it affects not
   only the app itself (e.g., compared to normal app defects that cause
