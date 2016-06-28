@@ -134,4 +134,15 @@ $ croot
 $ brunch falcon
 {% endhighlight %}
 
-# Guide for installing DefDroid
+# Install DefDroid
+Once the system finishes building, you should see the output image in 
+`out/target/product/<device>/cm-11-<data>-UNOFFICIAL-<device>.zip` where 
+`<device>` is the code name for your Android devices. For Motorola G, it's 
+`falcon`.
+
+With the image zip file, follow the standard way to flash it to the phone.
+If you are not familiar with how to flash a custom ROM, there are plenty
+of guides online. For example, for the Motorola G device, you can follow
+steps in [this guide](http://wiki.cyanogenmod.org/w/Install_CM_for_falcon)
+
+
